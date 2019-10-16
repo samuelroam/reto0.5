@@ -1,5 +1,13 @@
 var translator = $('body').translate({lang: "es", t: dict});
 	var dict={
+		"plano": {
+			es: "Plano",
+			en: "Map",
+		},
+		"tiendas": {
+			es: "Tiendas",
+			en: "Shops",
+		},
 		"mediamarkt_landing": {
 			es: "Tienda para compra de aparatos electronicos y tecnologias",
 			en: "Shop to buy electronic and technology stuff",
