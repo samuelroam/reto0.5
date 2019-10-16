@@ -21,7 +21,7 @@
         </div>
         <div id="botones">
             <button class="boton trn" data-trn-key="plano">Plano</button>
-            <button class="boton trn" data-trn-key="tiendas">Tiendas</button>
+            <button class="boton trn" data-trn-key="tiendas"><a href="<?php echo route('tiendas');?>">Tiendas</a></button>
         </div>
 
     </header>
