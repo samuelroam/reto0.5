@@ -14,7 +14,7 @@ var translator = $('body').translate({lang: "es", t: dict});
 			en: "Hipermarket to buy food and some stuff for home",
 
 		},
-		"": {
+		" ": {
 			es: "",
 			en: "",
 		}
