@@ -9,6 +9,7 @@ body{
 	float: right;
 }
 header{
+	background-color: #D3D3D3;
 	display: flex;
 	justify-content: space-between;
 	flex-flow: row wrap;
