@@ -46,6 +46,16 @@ section{
 	justify-content: center;
 	flex-flow: row wrap;
 }
+.carrusel{
+	display: flex;
+	justify-content: center;
+}
+#imagenes {
+    width: 70vw;
+    height: 400px;
+	background-size: cover;
+	align: center;
+}
 #imagenes img{
 	width: 70vw;
 }

@@ -6,6 +6,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/jquery.translate.js"></script>
     <script src="js/diccionario.js"></script>
+    <script src="js/javaScript.js"></script>
 </head>
 <body>
     <!--botones para la traduccion de la pagina-->
@@ -30,10 +31,28 @@
     </header>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
     <section>
-        <div id="imagenes" align="center">
-            <img src="img/garbera.jpg">
+        <div class="carousel">
+            
+            <div id="imagenes"></div>
+            
         </div>
+        
+    <!--    <div id="imagenes" align="center">
+            <img src="img/garbera.jpg">
+        </div>-->
         <div id=divtiendas>
             <!--Media Martkt-->
             <div id=mediamarkt class="tiendas">
