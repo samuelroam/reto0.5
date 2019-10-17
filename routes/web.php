@@ -13,4 +13,8 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name("landing");
+
+Route::get("/tiendas",function(){
+	return view("tiendas");
+})->name('tiendas');
