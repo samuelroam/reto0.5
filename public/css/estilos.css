@@ -23,9 +23,6 @@ header{
 
 button a{
 	text-decoration: none;
-<<<<<<< HEAD
-	font-weight: 600;
-=======
 
 }
 
@@ -33,7 +30,6 @@ button a{
     text-decoration: none;
     padding: 10px;
     font-weight: 600;
->>>>>>> b232d5ac156a40057f567dc54e6347f6c12579ac
     font-size: 20px;
     color: #ffffff;
 }

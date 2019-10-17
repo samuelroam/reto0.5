@@ -13,12 +13,12 @@
 
 Route::get('/', function () {
     return view('welcome');
-<<<<<<< HEAD
-})->name("landing");
-=======
-});
->>>>>>> b232d5ac156a40057f567dc54e6347f6c12579ac
+})->name('welcome');
 
 Route::get("/tiendas",function(){
 	return view("tiendas");
 })->name('tiendas');
+
+Route::get("/plano",function(){
+    return view("plano");
+})->name('plano');
