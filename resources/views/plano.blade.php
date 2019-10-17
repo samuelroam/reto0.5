@@ -20,7 +20,7 @@
             <p>Abierto de 10:00 a 22:00</p>
         </div>
         <div id="botones">
-            <button class="boton trn" data-trn-key="inicio"><a href="<?php echo route('welcome');?>">Inicio</button>
+            <button class="boton trn" data-trn-key="inicio"><a href="<?php echo route('landing');?>">Inicio</button>
         </div>
 
     </header>

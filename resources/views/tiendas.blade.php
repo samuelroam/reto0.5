@@ -20,12 +20,20 @@
             <p>Abierto de 10:00 a 22:00</p>
         </div>
         <div id="botones">
-            <button class="boton trn" data-trn-key="inicio"><a href="<?php echo route('welcome');?>">Inicio</button>
+            <button class="boton trn" data-trn-key="inicio"><a href="<?php echo route('landing');?>">Inicio</a></button>
         </div>
 
     </header>
     <section>
-      
+      <form action="#" method="post">
+      <legend>¿En que tienda trabajas?</legend>
+        <select size="1" name="tiendas" id="lista">
+            <option value="zara">Zara</option>
+            <option value="mediamarkt">MediaMarkt</option>
+            <option value="eroski">Eroski</option>
+        </select><br>
+        <input type="submit" name="enviar" value="Enviar">
+    </form>
     </section>
     <footer>
         <div>
