@@ -22,6 +22,22 @@ var translator = $('body').translate({lang: "es", t: dict});
 			en: "Hipermarket to buy food and some stuff for home",
 
 		},
+		"forum_landing": {
+			es: "Tienda de deportes y equipamiento deportivo",
+			en: "Sports and sports equipment shop",
+		},
+		"mc_landing": {
+			es: "Restaurante familiar de comida rápida y hamburguesas",
+			en: "Fast food family restaurant and hamburguers",
+		},
+		"hm_landing": {
+			es: "Tienda de ropa y artículos de moda",
+			en: "Clothing and fashion store",
+		},
+		"vans_landing": {
+			es: "Tienda de zapatos y calzados",
+			en: "Shoe and footwear store",
+		},
 		" ": {
 			es: "",
 			en: "",
