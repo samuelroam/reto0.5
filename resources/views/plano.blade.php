@@ -25,7 +25,9 @@
 
     </header>
     <section>
-      
+    <div id="imagenes" align="center">
+            <img src="img/garbera.PNG">
+        </div>
     </section>
     <footer>
         <div>
