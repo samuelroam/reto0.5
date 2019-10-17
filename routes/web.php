@@ -22,3 +22,11 @@ Route::get("/tiendas",function(){
 Route::get("/plano",function(){
     return view("plano");
 })->name('plano');
+
+Route::get("/prueba",function(){
+    return view("prueba");
+})->name('prueba');
+
+Route::get('blade', function () {
+    return view('prueba');
+});

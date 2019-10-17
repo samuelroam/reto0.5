@@ -7,15 +7,20 @@
     <script src="js/jquery.translate.js"></script>
     <script src="js/diccionario.js"></script>
     <script src="js/javaScript.js"></script>
+
+    <script> 
+    $(function(){
+      $("#includedContent").load("includes.php"); 
+    });
+    </script>
+
+
 </head>
 <body>
-    <!--botones para la traduccion de la pagina-->
-    <div id=traductores>
-        <input type="image" src="img/esp.jpg" class="bandera" onclick="cambiarEsp()">
-        <input type="image" src="img/ing.png" class="bandera" onclick="cambiarIng()">
-    </div>
-
+    
+<div id="includedContent"></div>
     <header>
+    @section('header')
         <div id="icono">
             <img src="img/icono.jpg">
         </div>
@@ -27,7 +32,15 @@
             <button class="boton trn" data-trn-key="plano"><a href="<?php echo route('plano');?>">Plano</a></button>
             <button class="boton trn" data-trn-key="tiendas"><a href="<?php echo route('tiendas');?>">Tiendas</a></button>
         </div>
+        <!--botones para la traduccion de la pagina-->
+    <div id=traductores>
+        <input type="image" src="img/esp.jpg" class="bandera" onclick="cambiarEsp()">
+        <input type="image" src="img/ing.png" class="bandera" onclick="cambiarIng()">
+    </div>
 
+    <div w3-include-html="includes.html"></div>
+    @endsection
+    @yield("header")
     </header>
 
 
