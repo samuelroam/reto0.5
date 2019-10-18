@@ -9,6 +9,7 @@ body{
 	float: right;
 }
 header{
+	background-color: #D3D3D3;
 	display: flex;
 	justify-content: space-between;
 	flex-flow: row wrap;
@@ -45,6 +46,16 @@ section{
 	justify-content: center;
 	flex-flow: row wrap;
 }
+.carrusel{
+	display: flex;
+	justify-content: center;
+}
+#imagenes {
+    width: 70vw;
+    height: 400px;
+	background-size: cover;
+	align: center;
+}
 #imagenes img{
 	width: 70vw;
 }
@@ -56,6 +67,7 @@ section{
 .tiendas{
 	width: 20vw;
 	border-style: solid;
+	text-align: center;
 }
 .tiendas img{
 	width: 18vw;

@@ -2,19 +2,21 @@
 <html>
 <head>
     <title>Inicio</title>
-    <link href="css/estilos.css" rel="stylesheet" />
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.translate.js"></script>
-    <script src="js/diccionario.js"></script>
+    <link href="{{ url('/css/estilos.css') }}" rel="stylesheet" />
+    <script src="{{ url('/js/jquery.js')}}"></script>
+    <script src="{{ url('/js/jquery.translate.js') }}"></script>
+    <script src="{{ url('/js/diccionario.js') }}"></script>
 </head>
 <body>
+    
+
     <div id=traductores>
-        <input type="image" src="img/esp.jpg" class="bandera" onclick="cambiarEsp()">
-        <input type="image" src="img/ing.png" class="bandera" onclick="cambiarIng()">
+        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">
+        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="cambiarIng()">
     </div>
     <header>
         <div id="icono">
-            <img src="img/icono.jpg">
+            <img src="{{ url('img/icono.jpg')}}">
         </div>
         <div id=infobasica>
             <p>Abierto de 10:00 a 22:00</p>
@@ -25,12 +27,13 @@
 
     </header>
     <section>
-      <form action="#" method="post">
+      <form action="{{route('select')}}" method="post">
+        @csrf
       <legend>¿En que tienda trabajas?</legend>
         <select size="1" name="tiendas" id="lista">
-            <option value="zara">Zara</option>
-            <option value="mediamarkt">MediaMarkt</option>
-            <option value="eroski">Eroski</option>
+            <option value="1">Zara</option>
+            <option value="2">MediaMarkt</option>
+            <option value="3">Eroski</option>
         </select><br>
         <input type="submit" name="enviar" value="Enviar">
     </form>

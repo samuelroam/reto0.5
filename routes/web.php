@@ -16,5 +16,19 @@ Route::get('/', function () {
 })->name("landing");
 
 Route::get("/tiendas",function(){
-	return view("tiendas");
-})->name('tiendas');
+	return view('tiendas');
+})->name("tiendas");
+
+Route::get("/añadir_producto",function(){
+	return view("añadir_producto");
+})->name("añadir");
+
+Route::get("/plano",function(){
+    return view("plano");
+})->name('plano');
+
+Route::post("/tiendas/select","ShopController@select")->name("select");
+
+Route::get('/productos',"ProductController@index")->name("product");
+
+Route::post("/añadir_producto/store/","ProductController@store")->name("add");

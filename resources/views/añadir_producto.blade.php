@@ -6,19 +6,9 @@
     <script src="{{ url('/js/jquery.js')}}"></script>
     <script src="{{ url('/js/jquery.translate.js') }}"></script>
     <script src="{{ url('/js/diccionario.js') }}"></script>
-    <?php
-      session_start();
-      if (isset($_SESSION["tienda"])){
-
-      }else{
-       $_SESSION["tienda"]=$id; 
-      }
-      
-     ?>
+    <?php session_start(); ?>
 </head>
 <body>
-    
-
     <div id=traductores>
         <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">
         <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="cambiarIng()">
@@ -36,16 +26,16 @@
 
     </header>
     <section>
-     	<h1>Bienvenido a <?php if($_SESSION["tienda"]==1){
-            echo "Zara";
-        }
-        elseif ($_SESSION["tienda"]==2) {
-            echo "MediaMarkt";
-         }
-        elseif ($_SESSION["tienda"]==3) {
-             echo "Eroski";
-         } ?></h1><br>
-        <button class="boton trn" data-trn-key="inicio"><a href="<?php echo route('añadir');?>">Añadir producto</a></button>
+      <form action="{{route('add')}}" method="post">
+        @csrf
+      Nombre: <input type="text" name="nombre"><br><br>
+      Descripcion: <textarea name="comentarios"></textarea> <br><br>
+      Stock: <input type="numeric" name="stock"><br><br>
+      Imagen: <input type="text" name="imagen"><br><br>
+      Enlace: <input type="text" name="enlace"><br><br>
+      <input type="hidden" name="id" value="<?php echo $_SESSION['tienda'] ?>">
+        <input type="submit" name="enviar" value="Enviar">
+    </form>
     </section>
     <footer>
         <div>
