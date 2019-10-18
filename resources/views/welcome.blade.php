@@ -20,7 +20,6 @@
     
 <div id="includedContent"></div>
     <header>
-    @section('header')
         <div id="icono">
             <img src="img/icono.jpg">
         </div>
@@ -39,8 +38,6 @@
     </div>
 
     <div w3-include-html="includes.html"></div>
-    @endsection
-    @yield("header")
     </header>
 
 

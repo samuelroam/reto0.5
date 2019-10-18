@@ -1,6 +1,21 @@
-@extends("welcome")
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio</title>
+    <link href="css/estilos.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.translate.js"></script>
+    <script src="js/diccionario.js"></script>
+    <script src="js/javaScript.js"></script>
+
+   
+
+
+</head>
+<body>
+
 <header>
-@yield('header')
+
 
         <div id="icono">
             <img src="img/icono.jpg">
@@ -19,4 +34,7 @@
         <input type="image" src="img/ing.png" class="bandera" onclick="cambiarIng()">
     </div>
 
+
     </header>
+    </body>
+    </html>

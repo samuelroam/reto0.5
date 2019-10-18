@@ -22,7 +22,6 @@
         <div id="botones">
             <button class="boton trn" data-trn-key="inicio"><a href="<?php echo route('landing');?>">Inicio</button>
         </div>
-
     </header>
     <section>
     <div id="imagenes" align="center">
