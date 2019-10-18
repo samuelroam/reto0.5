@@ -6,6 +6,7 @@
     <script src="{{ url('/js/jquery.js')}}"></script>
     <script src="{{ url('/js/jquery.translate.js') }}"></script>
     <script src="{{ url('/js/diccionario.js') }}"></script>
+    <script src="{{ url('/js/javaScript.js') }}"></script>
     <?php session_start(); ?>
 </head>
 <body>
@@ -28,11 +29,11 @@
     <section>
       <form action="{{route('add')}}" method="post">
         @csrf
-      Nombre: <input type="text" name="nombre"><br><br>
-      Descripcion: <textarea name="comentarios"></textarea> <br><br>
-      Stock: <input type="numeric" name="stock"><br><br>
+      Nombre: <input type="text" name="nombre" onkeyup="this.value=NumText(this.value)"><br><br>
+      Descripcion: <textarea name="comentarios" onkeyup="this.value=NumText(this.value)"></textarea> <br><br>
+      Stock: <input type="numeric" name="stock" onkeyup="this.value=Numeros(this.value)"><br><br>
       Imagen: <input type="text" name="imagen"><br><br>
-      Enlace: <input type="text" name="enlace"><br><br>
+      Enlace: <input type="text" name="enlace" onkeyup="this.value=TextURL(this.value)"><br><br>
       <input type="hidden" name="id" value="<?php echo $_SESSION['tienda'] ?>">
         <input type="submit" name="enviar" value="Enviar">
     </form>
