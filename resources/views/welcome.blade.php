@@ -13,10 +13,7 @@
 <body>
     
 
-    <div id=traductores>
-        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">
-        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="cambiarIng()">
-    </div>
+    
     <header>
         <div id="icono">
             <img src="{{ url('img/icono.jpg')}}">
@@ -24,9 +21,15 @@
         <div id=infobasica>
             <p class="trn" data-trn-key="horario">Abierto de 10:00 a 22:00</p>
         </div>
+        
         <div id="botones">
             <button class="boton"><a class="trn" data-trn-key="plano" href="<?php echo route('plano');?>">Plano</a></button>
             <button class="boton"><a class="trn" data-trn-key="tiendas" href="<?php echo route('tiendas');?>">Tiendas</a></button>
+        </div>
+
+        <div id=traductores>
+        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">
+        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="cambiarIng()">
         </div>
 
     </header>

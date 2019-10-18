@@ -18,7 +18,7 @@ header{
 	width: 10vw;
 }
 #botones{
-	margin-right: 5vw;
+	margin-left: 10vw;
 	margin-top: 5vh;
 }
 
@@ -54,7 +54,7 @@ section{
     width: 70vw;
     height: 400px;
 	background-size: cover;
-	align: center;
+	
 }
 #imagenes img{
 	width: 70vw;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Inicio</title>
+    <title>Tiendas</title>
     <link href="{{ url('/css/estilos.css') }}" rel="stylesheet" />
     <script src="{{ url('/js/jquery.js')}}"></script>
     <script src="{{ url('/js/jquery.translate.js') }}"></script>
@@ -10,10 +10,7 @@
 <body>
     
 
-    <div id=traductores>
-        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">
-        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="cambiarIng()">
-    </div>
+    
     <header>
         <div id="icono">
             <img src="{{ url('img/icono.jpg')}}">
@@ -24,6 +21,10 @@
         <div id="botones">
             <button class="boton"><a class="trn" data-trn-key="inicio" href="<?php echo route('landing');?>">Inicio</a></button>
         </div>
+        <div id=traductores>
+        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">
+        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="cambiarIng()">
+    </div>
 
     </header>
     <section>
@@ -42,7 +43,7 @@
         <div>
             <p class="trn" data-trn-key="footer1" >Landing page realizada por Samuel</p>
             <p class="trn" data-trn-key="footer2">Grupo Garbera</p>
-            <p class="trn" data-trn-key="footer3">reto0.5</p>
+            <p class="trn" data-trn-key="footer3">Reto 0.5</p>
         </div>
     </footer>
 

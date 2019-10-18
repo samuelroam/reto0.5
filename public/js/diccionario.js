@@ -1,5 +1,7 @@
 var translator = $('body').translate({lang: "es", t: dict});
 	var dict={
+		
+		
 		"horario": {
 			es: "Abierto de 10:00 a 22:00",
 			en: "Open from 10:00 to 22:00",
