@@ -32,10 +32,11 @@
         </div>
         <div id="botones">
             <button class="boton trn" data-trn-key="inicio"><a href="<?php echo route('landing');?>">Inicio</a></button>
+
         </div>
 
     </header>
-    <section>
+    
      	<h1>Bienvenido a <?php if($_SESSION["tienda"]==1){
             echo "Zara";
         }
@@ -45,8 +46,23 @@
         elseif ($_SESSION["tienda"]==3) {
              echo "Eroski";
          } ?></h1><br>
-        <button class="boton trn" data-trn-key="inicio"><a href="<?php echo route('añadir');?>">Añadir producto</a></button>
-    </section>
+        <button class="boton trn" data-trn-key="añadir"><a href="<?php echo route('añadir');?>">Añadir producto</a></button>
+         <button class="boton trn" data-trn-key="ver"><a href="/productos/<?php echo $_SESSION['tienda']?>">Ver productos</a></button><br><br>
+
+        <div id="container">
+         <?php 
+            if(isset($productos)){
+                foreach ($productos as $producto) {
+                    echo "<div class='product'>
+                    Nombre: ".$producto->nombre."<br>Descripcion: ".$producto->descripcion."<br>Stock: ".$producto->stock."<br>Enlace: ".$producto->enlace."
+                    <br><br>
+                    <button class='update'><a href='/tienda/destroy/".$producto->id."'>Eliminar</a></button>
+                    <button class='update'><a href='/cambiar_stock/".$producto->id."'>Cambiar stock</a></button>
+                    </div>";
+                }
+            }
+         ?>
+    </div>
     <footer>
         <div>
             <p>Landing page realizada por Samuel</p>

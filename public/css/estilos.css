@@ -22,6 +22,19 @@ header{
 	margin-top: 5vh;
 }
 
+#container{
+	display: flex;
+	flex-flow: row wrap;
+}
+.update a{
+	color: black;
+}
+.product{
+	border: 1px solid black;
+	padding: 1%;
+	flex: 40%;
+}
+
 button a{
 	text-decoration: none;
 	font-weight: 600;

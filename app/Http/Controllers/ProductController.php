@@ -6,6 +6,7 @@ use DB;
 use App\Producto;
 use Illuminate\Http\Request;
 
+
 class ProductController extends Controller
 {
     /**
@@ -13,12 +14,10 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        $productos = Producto::all();
-        foreach($productos as $producto){
-            echo $producto->nombre."<br>";
-        }
+        $productos = Producto::all()->where("id_tienda","=",$id);
+        return view("tienda",["productos"=>$productos]);
     }
 
     /**
@@ -81,9 +80,12 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+         $stock=$request->input("stock");
+         $id=$request->input("id");
+         DB::table('productos')->where("id","=",$id)->update(["stock"=>$stock]);
+         return view("tienda");
     }
 
     /**
@@ -94,6 +96,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('productos')->where("id","=",$id)->delete();
+        return view("tienda");
     }
 }
