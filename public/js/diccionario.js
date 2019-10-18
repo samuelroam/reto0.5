@@ -1,5 +1,13 @@
 var translator = $('body').translate({lang: "es", t: dict});
 	var dict={
+		"horario": {
+			es: "Abierto de 10:00 a 22:00",
+			en: "Open from 10:00 to 22:00",
+		},
+		"inicio": {
+			es: "Inicio",
+			en: "Home",
+		},
 		"plano": {
 			es: "Plano",
 			en: "Map",
@@ -38,6 +46,23 @@ var translator = $('body').translate({lang: "es", t: dict});
 			es: "Tienda de zapatos y calzados",
 			en: "Shoe and footwear store",
 		},
+		"footer1": {
+			es: "Landing page realizada por Samuel",
+			en: "Landing page done by Samuel",
+		},
+		"footer2": {
+			es: "Grupo Garbera",
+			en: "Garbera Team",
+		},
+		"footer3": {
+			es: "Reto 0.5",
+			en: "0.5 Challenge",
+		},
+		"legend": {
+			es: "¿En que tienda trabajas?",
+			en: "In which shop do you work ?",
+		},
+
 		" ": {
 			es: "",
 			en: "",
