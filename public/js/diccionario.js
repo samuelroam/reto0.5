@@ -1,7 +1,6 @@
 var translator = $('body').translate({lang: "es", t: dict});
 	var dict={
 		
-		
 		"horario": {
 			es: "Abierto de 10:00 a 22:00",
 			en: "Open from 10:00 to 22:00",
@@ -64,8 +63,24 @@ var translator = $('body').translate({lang: "es", t: dict});
 			es: "¿En que tienda trabajas?",
 			en: "In which shop do you work ?",
 		},
+		"nombre": {
+			es: "Nombre:",
+			en: "Name:",
+		},
+		"descripcion": {
+			es: "Descripción:",
+			en: "Description:",
+		},
+		"imagen": {
+			es: "Imagen:",
+			en: "Image:",
+		},
+		"enlace": {
+			es: "Enlace:",
+			en: "Link:",
+		},
 
-		" ": {
+		"": {
 			es: "",
 			en: "",
 		}
