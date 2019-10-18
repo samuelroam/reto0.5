@@ -6,6 +6,9 @@
     <script src="{{ url('/js/jquery.js')}}"></script>
     <script src="{{ url('/js/jquery.translate.js') }}"></script>
     <script src="{{ url('/js/diccionario.js') }}"></script>
+    <?php 
+    session_start();
+    session_destroy();?>
 </head>
 <body>
     

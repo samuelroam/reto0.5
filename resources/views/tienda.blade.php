@@ -28,7 +28,7 @@
         </div>
         
         <div id="botones">
-            <button class="boton"><a class="trn" data-trn-key="plano" href="<?php echo route('plano');?>">Plano</a></button>
+            <button class="boton"><a class="trn" data-trn-key="inicio" href="<?php echo route('landing');?>">Inicio</a></button>
             <button class="boton"><a class="trn" data-trn-key="tiendas" href="<?php echo route('tiendas');?>">Tiendas</a></button>
         </div>
 
@@ -59,7 +59,7 @@
                     Nombre: ".$producto->nombre."<br>Descripcion: ".$producto->descripcion."<br>Stock: ".$producto->stock."<br>Enlace: ".$producto->enlace."
                     <br><br>
                     <button class='update'><a href='/tienda/destroy/".$producto->id."'>Eliminar</a></button>
-                    <button class='update'><a href='/cambiar_stock/".$producto->id."'>Cambiar</a></button>
+                    <button class='update'><a href='/cambiar_stock/".$producto->id."'>Cambiar stock</a></button>
                     </div>";
                 }
             }

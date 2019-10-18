@@ -20,6 +20,9 @@
         </div>
         <div id="botones">
             <button class="boton"><a class="trn" data-trn-key="inicio" href="<?php echo route('landing');?>">Inicio</a></button>
+            <button class="boton"><a class="trn" data-trn-key="tiendas" href="<?php echo route('tiendas');?>">Tiendas</a></button>
+            <button class="boton"><a class="trn" data-trn-key="tienda" href="<?php echo route('tienda');?>">Tienda</a></button>
+
         </div>
         <div id=traductores>
         <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">

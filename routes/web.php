@@ -27,6 +27,10 @@ Route::get("/plano",function(){
     return view("plano");
 })->name('plano');
 
+Route::get("/tienda",function(){
+	return view("tienda");
+})->name("tienda");
+
 Route::post("/tiendas/select","ShopController@select")->name("select");
 
 Route::get('/productos/{id}',"ProductController@index");
