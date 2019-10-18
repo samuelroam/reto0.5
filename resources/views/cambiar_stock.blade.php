@@ -9,13 +9,10 @@
     <?php session_start(); ?>
 </head>
 <body>
-    <div id=traductores>
-        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">
-        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="cambiarIng()">
-    </div>
+    
     <header>
         <div id="icono">
-            <img src="{{ url('img/icono.jpg')}}">
+            <a href="<?php echo route('landing');?>"><img src="{{ url('img/icono.jpg')}}"></a>
         </div>
         <div id=infobasica>
             <p>Abierto de 10:00 a 22:00 </p>
@@ -23,7 +20,10 @@
         <div id="botones">
             <button class="boton trn" data-trn-key="inicio"><a href="<?php echo route('landing');?>">Inicio</a></button>
         </div>
-
+        <div id=traductores>
+            <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">
+            <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="cambiarIng()">
+        </div>
     </header>
     <section>
       <form action="{{route('update')}}" method="post">

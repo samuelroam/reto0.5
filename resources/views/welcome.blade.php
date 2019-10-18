@@ -16,7 +16,7 @@
     
     <header>
         <div id="icono">
-            <img src="{{ url('img/icono.jpg')}}">
+            <a href="<?php echo route('landing');?>"><img src="{{ url('img/icono.jpg')}}"></a>
         </div>
         <div id=infobasica>
             <p class="trn" data-trn-key="horario">Abierto de 10:00 a 22:00</p>
@@ -40,9 +40,7 @@
             
         </div>
         
-    <!--    <div id="imagenes" align="center">
-            <img src="img/garbera.jpg">
-        </div>-->
+
         <div id=divtiendas>
             <!--Media Martkt-->
             <div id=mediamarkt class="tiendas">
