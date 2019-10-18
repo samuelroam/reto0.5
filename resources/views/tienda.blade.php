@@ -19,20 +19,22 @@
 <body>
     
 
-    <div id=traductores>
-        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">
-        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="cambiarIng()">
-    </div>
     <header>
         <div id="icono">
             <img src="{{ url('img/icono.jpg')}}">
         </div>
         <div id=infobasica>
-            <p>Abierto de 10:00 a 22:00</p>
+            <p class="trn" data-trn-key="horario">Abierto de 10:00 a 22:00</p>
         </div>
+        
         <div id="botones">
-            <button class="boton trn" data-trn-key="inicio"><a href="<?php echo route('landing');?>">Inicio</a></button>
+            <button class="boton"><a class="trn" data-trn-key="plano" href="<?php echo route('plano');?>">Plano</a></button>
+            <button class="boton"><a class="trn" data-trn-key="tiendas" href="<?php echo route('tiendas');?>">Tiendas</a></button>
+        </div>
 
+        <div id=traductores>
+        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">
+        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="cambiarIng()">
         </div>
 
     </header>
@@ -57,7 +59,7 @@
                     Nombre: ".$producto->nombre."<br>Descripcion: ".$producto->descripcion."<br>Stock: ".$producto->stock."<br>Enlace: ".$producto->enlace."
                     <br><br>
                     <button class='update'><a href='/tienda/destroy/".$producto->id."'>Eliminar</a></button>
-                    <button class='update'><a href='/cambiar_stock/".$producto->id."'>Cambiar stock</a></button>
+                    <button class='update'><a href='/cambiar_stock/".$producto->id."'>Cambiar</a></button>
                     </div>";
                 }
             }

@@ -99,11 +99,11 @@ function Numeros(string){
 function NumText(string){
     var out = '';
     
-    var filtro = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ1234567890';
-	
+    var filtro = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ1234567890 ';
+    
     for (var i=0; i<string.length; i++)
        if (filtro.indexOf(string.charAt(i)) != -1) 
-	     out += string.charAt(i);
+         out += string.charAt(i);
     return out;
 }
 
@@ -111,10 +111,10 @@ function TextURL(string){
     var out = '';
     
     var filtro = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ1234567890@./?';
-	
+    
     for (var i=0; i<string.length; i++)
        if (filtro.indexOf(string.charAt(i)) != -1) 
-	     out += string.charAt(i);
+         out += string.charAt(i);
     return out;
 }
 
