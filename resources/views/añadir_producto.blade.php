@@ -34,11 +34,11 @@
       <form action="{{route('add')}}"enctype="multipart/form-data" method="post">
         @csrf
 
-      <p class="trn" data-trn-key="nombre">Nombre: </p><input type="text" name="nombre" onkeyup="this.value=NumText(this.value)"><br><br>
-      <p class="trn" data-trn-key="descripcion">Descripción: </p><textarea name="comentarios" onkeyup="this.value=NumText(this.value)"></textarea> <br><br>
-      <p>Stock: </p><input type="numeric" name="stock" onkeyup="this.value=Numeros(this.value)"><br><br>
-      <p class="trn" data-trn-key="imagen">Imagen: </p><input type="file" id="photo" name="photo"><br><br>
-      <p class="trn" data-trn-key="enlace">Enlace: </p><input type="text" name="enlace" onkeyup="this.value=TextURL(this.value)"><br><br>
+      <p class="trn" data-trn-key="nombre">Nombre: </p><input type="text" name="nombre" onkeyup="this.value=NumText(this.value)" required><br><br>
+      <p class="trn" data-trn-key="descripcion">Descripción: </p><textarea name="comentarios" onkeyup="this.value=NumText(this.value)" required></textarea> <br><br>
+      <p>Stock: </p><input type="numeric" name="stock" onkeyup="this.value=Numeros(this.value)" required><br><br>
+      <p class="trn" data-trn-key="imagen">Imagen: </p><input type="file" id="photo" name="photo" required><br><br>
+      <p class="trn" data-trn-key="enlace">Enlace: </p><input type="text" name="enlace" onkeyup="this.value=TextURL(this.value)" required><br><br>
       <input type="hidden" name="id" value="<?php echo $_SESSION['tienda'] ?>">
         <button id="send" class="trn" data-trn-key="enviar">Enviar</button>
     </form>
