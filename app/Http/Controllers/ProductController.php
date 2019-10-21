@@ -7,6 +7,8 @@ use App\Producto;
 use Illuminate\Http\Request;
 
 
+
+
 class ProductController extends Controller
 {
     /**
@@ -41,9 +43,16 @@ class ProductController extends Controller
         $nombre=$request->input("nombre");
         $descripcion=$request->input("comentarios");
         $stock=$request->input("stock");
-        $imagen=$request->input("imagen");
+        $imagen = "";
         $enlace=$request->input("enlace");
         $id=$request->input("id");
+
+            
+        $imagen = $request->file('photo')->getClientOriginalName();
+        $request->file("photo")->move("img/productos",$imagen);
+            
+    
+       
 
         DB::table('productos')->insert([
             ["nombre"=>$nombre,"descripcion"=>$descripcion,"stock"=>$stock,"imagen"=>$imagen,"enlace"=>$enlace,"id_tienda"=>$id]
@@ -82,11 +91,11 @@ class ProductController extends Controller
      */
     public function update(Request $request)
     {
-         $stock=$request->input("stock");
-         $id=$request->input("id");
-         DB::table('productos')->where("id","=",$id)->update(["stock"=>$stock]);
-         return view("tienda");
-    }
+     $stock=$request->input("stock");
+     $id=$request->input("id");
+     DB::table('productos')->where("id","=",$id)->update(["stock"=>$stock]);
+     return view("tienda");
+ }
 
     /**
      * Remove the specified resource from storage.
@@ -96,6 +105,10 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
+        $productos = Producto::all()->where("id","=",$id);
+         foreach ($productos as $producto) {
+           unlink("/home/xlazkano/laravel/reto/public/img/productos/".$producto->imagen);
+         }
         DB::table('productos')->where("id","=",$id)->delete();
         return view("tienda");
     }

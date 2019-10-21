@@ -56,6 +56,7 @@
             if(isset($productos)){
                 foreach ($productos as $producto) {
                     echo "<div class='product'>
+                    <img src='/img/productos/".$producto->imagen."'><br><br>
                     Nombre: ".$producto->nombre."<br>Descripcion: ".$producto->descripcion."<br>Stock: ".$producto->stock."<br>Enlace: ".$producto->enlace."
                     <br><br>
                     <button class='update'><a href='/tienda/destroy/".$producto->id."'>Eliminar</a></button>

@@ -56,9 +56,13 @@ section{
 }
 
 .product{
+	text-align: center;
 	border: 1px solid black;
 	flex: 40%;
 	padding: 1%;
+}
+.product img{
+	width: 30%;
 }
 .carrusel{
 	display: flex;
