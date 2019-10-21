@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use DB;
+
 use App\Producto;
 use Illuminate\Http\Request;
 
@@ -46,15 +46,14 @@ class ProductController extends Controller
         $imagen = "";
         $enlace=$request->input("enlace");
         $id=$request->input("id");
-
-            
+   
         $imagen = $request->file('photo')->getClientOriginalName();
         $request->file("photo")->move("img/productos",$imagen);
             
     
        
 
-        DB::table('productos')->insert([
+        Producto::insert([
             ["nombre"=>$nombre,"descripcion"=>$descripcion,"stock"=>$stock,"imagen"=>$imagen,"enlace"=>$enlace,"id_tienda"=>$id]
         ]);
         return view("tienda");
@@ -93,7 +92,7 @@ class ProductController extends Controller
     {
      $stock=$request->input("stock");
      $id=$request->input("id");
-     DB::table('productos')->where("id","=",$id)->update(["stock"=>$stock]);
+     Producto::where("id",$id)->update(["stock"=>$stock]);
      return view("tienda");
  }
 
@@ -109,7 +108,7 @@ class ProductController extends Controller
          foreach ($productos as $producto) {
            unlink("/home/xlazkano/laravel/reto/public/img/productos/".$producto->imagen);
          }
-        DB::table('productos')->where("id","=",$id)->delete();
+        Producto::where("id",$id)->delete();
         return view("tienda");
     }
 }

@@ -31,7 +31,7 @@
 
     </header>
     <section>
-      <form action="{{route('add')}}"enctype="multipart/form-data" method="post">
+      <form action="{{route('add')}}" enctype="multipart/form-data" method="post">
         @csrf
 
       <p class="trn" data-trn-key="nombre">Nombre: </p><input type="text" name="nombre" onkeyup="this.value=NumText(this.value)" required><br><br>
