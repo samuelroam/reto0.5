@@ -39,7 +39,7 @@
             <option value="2">MediaMarkt</option>
             <option value="3">Eroski</option>
         </select><br>
-        <input type="submit" name="enviar" value="Enviar">
+        <button class="trn" data-trn-key="enviar">Enviar</button>
     </form>
     </section>
     <footer>

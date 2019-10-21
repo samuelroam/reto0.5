@@ -39,7 +39,7 @@
       <p class="trn" data-trn-key="imagen">Imagen: </p><input type="text" name="imagen"><br><br>
       <p class="trn" data-trn-key="enlace">Enlace: </p><input type="text" name="enlace" onkeyup="this.value=TextURL(this.value)"><br><br>
       <input type="hidden" name="id" value="<?php echo $_SESSION['tienda'] ?>">
-        <input type="submit" name="enviar" value="Enviar">
+        <button class="trn" data-trn-key="enviar">Enviar</button>
     </form>
     </section>
     <footer>
