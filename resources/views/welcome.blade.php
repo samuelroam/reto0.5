@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +15,9 @@
 </head>
 <body>
     
-
+    @section('encabezado')
+        
+    
     
     <header>
         <div id="icono">
@@ -35,6 +38,9 @@
         </div>
 
     </header>
+
+        
+    @show
     <section>
        <div class="carousel">
             
