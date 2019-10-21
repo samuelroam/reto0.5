@@ -11,15 +11,25 @@ body{
 header{
 	background-color: #D3D3D3;
 	display: flex;
-	justify-content: space-between;
-	flex-flow: row wrap;
+	justify-content: space-around;
+	flex-direction: row;
+
 }
 #icono img{
 	width: 10vw;
 }
 #botones{
-	margin-left: 10vw;
-	margin-top: 5vh;
+	flex: 1 1 30%;
+	
+}
+#traductores{
+	flex:1 1 10%;
+	
+}
+#infobasica{
+	flex: 1 1 20%;
+	padding-top: 1vh;
+	
 }
 
 button a{
@@ -83,7 +93,7 @@ section{
 	flex-flow: row wrap;
 }
 .tiendas{
-	width: 20vw;
+	flex: 22%;
 	border-style: solid;
 	text-align: center;
 }
@@ -102,3 +112,26 @@ footer p{
 h1 p{
 	display: inline-block;
 }
+@media (max-width: 900px){
+	header{
+		flex-direction: column;
+		align-items: center
+	}
+
+	.tiendas{
+		flex: 45%;
+	}
+	#icono img{
+		flex: 40%;
+	}
+	#botones{
+		flex: 40%;
+	}
+	#traductores{
+		flex: 40%;
+	}
+	#infobasica{
+		flex: 40%;
+	}
+}
+
