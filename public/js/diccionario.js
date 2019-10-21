@@ -17,6 +17,10 @@ var translator = $('body').translate({lang: "es", t: dict});
 			es: "Tiendas",
 			en: "Shops",
 		},
+		"tienda": {
+			es: "Tienda",
+			en: "Shop",
+		},
 		"mediamarkt_landing": {
 			es: "Tienda para compra de aparatos electronicos y tecnologias",
 			en: "Shop to buy electronic and technology stuff",
@@ -78,6 +82,22 @@ var translator = $('body').translate({lang: "es", t: dict});
 		"enlace": {
 			es: "Enlace:",
 			en: "Link:",
+		},
+		"ver": {
+			es: "Ver Productos",
+			en: "View Products",
+		},
+		"añadir": {
+			es: "Añadir Producto",
+			en: "Add Product",
+		},
+		"enviar": {
+			es: "Enviar",
+			en: "Send",
+		},
+		"bienvenida": {
+			es: "Bienvenido a",
+			en: "Welcome to",
 		},
 
 		"": {

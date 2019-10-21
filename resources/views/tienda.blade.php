@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Inicio</title>
+    <title>Tienda</title>
     <link href="{{ url('/css/estilos.css') }}" rel="stylesheet" />
     <script src="{{ url('/js/jquery.js')}}"></script>
     <script src="{{ url('/js/jquery.translate.js') }}"></script>
     <script src="{{ url('/js/diccionario.js') }}"></script>
+    <script src="{{ url('/js/javaScript.js') }}"></script>
     <?php
       session_start();
       if (isset($_SESSION["tienda"])){
@@ -21,7 +22,7 @@
 
     <header>
         <div id="icono">
-            <img src="{{ url('img/icono.jpg')}}">
+            <a href="<?php echo route('landing');?>"><img src="{{ url('img/icono.jpg')}}"></a>
         </div>
         <div id=infobasica>
             <p class="trn" data-trn-key="horario">Abierto de 10:00 a 22:00</p>
@@ -33,13 +34,13 @@
         </div>
 
         <div id=traductores>
-        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">
-        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="cambiarIng()">
+        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="ctrlEsp()">
+        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="ctrlIng()">
         </div>
 
     </header>
     
-     	<h1>Bienvenido a <?php if($_SESSION["tienda"]==1){
+     	<h1><p class="trn" data-trn-key="bienvenida">Bienvenido a </p><?php if($_SESSION["tienda"]==1){
             echo "Zara";
         }
         elseif ($_SESSION["tienda"]==2) {
@@ -48,8 +49,8 @@
         elseif ($_SESSION["tienda"]==3) {
              echo "Eroski";
          } ?></h1><br>
-        <button class="boton trn" data-trn-key="añadir"><a href="<?php echo route('añadir');?>">Añadir producto</a></button>
-         <button class="boton trn" data-trn-key="ver"><a href="/productos/<?php echo $_SESSION['tienda']?>">Ver productos</a></button><br><br>
+        <button class="boton"><a class="trn" data-trn-key="añadir" href="<?php echo route('añadir');?>">Añadir Producto</a></button>
+         <button class="boton"><a class="trn" data-trn-key="ver" href="/productos/<?php echo $_SESSION['tienda']?>">Ver Productos</a></button><br><br>
 
         <div id="container">
          <?php 
@@ -68,9 +69,9 @@
     </div>
     <footer>
         <div>
-            <p>Landing page realizada por Samuel</p>
-            <p>Grupo Garbera</p>
-            <p>reto0.5</p>
+            <p class="trn" data-trn-key="footer1">Landing page realizada por Samuel</p>
+            <p class="trn" data-trn-key="footer2">Grupo Garbera</p>
+            <p class="trn" data-trn-key="footer3">Reto 0.5</p>
         </div>
     </footer>
 

@@ -13,7 +13,7 @@
     
     <header>
         <div id="icono">
-            <img src="{{ url('img/icono.jpg')}}">
+            <a href="<?php echo route('landing');?>"><img src="{{ url('img/icono.jpg')}}"></a>
         </div>
         <div id=infobasica>
             <p class="trn" data-trn-key="horario">Abierto de 10:00 a 22:00</p>
@@ -25,21 +25,22 @@
 
         </div>
         <div id=traductores>
-        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">
-        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="cambiarIng()">
+            <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="ctrlEsp()">
+            <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="ctrlIng()">
     </div>
 
     </header>
     <section>
       <form action="{{route('add')}}"enctype="multipart/form-data" method="post">
         @csrf
+
       <p class="trn" data-trn-key="nombre">Nombre: </p><input type="text" name="nombre" onkeyup="this.value=NumText(this.value)"><br><br>
       <p class="trn" data-trn-key="descripcion">Descripción: </p><textarea name="comentarios" onkeyup="this.value=NumText(this.value)"></textarea> <br><br>
       <p>Stock: </p><input type="numeric" name="stock" onkeyup="this.value=Numeros(this.value)"><br><br>
       <p class="trn" data-trn-key="imagen">Imagen: </p><input type="file" id="photo" name="photo"><br><br>
       <p class="trn" data-trn-key="enlace">Enlace: </p><input type="text" name="enlace" onkeyup="this.value=TextURL(this.value)"><br><br>
       <input type="hidden" name="id" value="<?php echo $_SESSION['tienda'] ?>">
-        <input type="submit" name="enviar" value="Enviar">
+        <button id="send" class="trn" data-trn-key="enviar">Enviar</button>
     </form>
     </section>
     <footer>

@@ -3,15 +3,16 @@
 <head>
     <title>Plano</title>
     <link href="css/estilos.css" rel="stylesheet" />
-    <script src="js/jquery.js"></script>
+    <script src="{{ url('/js/jquery.js')}}"></script>
     <script src="js/jquery.translate.js"></script>
     <script src="js/diccionario.js"></script>
+    <script src="js/javaScript.js"></script>
 </head>
 <body>
     
     <header>
         <div id="icono">
-            <img src="img/icono.jpg">
+            <a href="<?php echo route('landing');?>"><img src="{{ url('img/icono.jpg')}}"></a>
         </div>
         <div id=infobasica>
             <p class="trn" data-trn-key="horario" >Abierto de 10:00 a 22:00</p>
@@ -20,8 +21,8 @@
             <button class="boton"><a class="trn" data-trn-key="inicio" href="<?php echo route('landing');?>">Inicio</a></button>
         </div>
         <div id=traductores>
-        <input type="image" src="img/esp.jpg" class="bandera" onclick="cambiarEsp()">
-        <input type="image" src="img/ing.png" class="bandera" onclick="cambiarIng()">
+        <input type="image" src="img/esp.jpg" class="bandera" onclick="ctrlEsp()">
+        <input type="image" src="img/ing.png" class="bandera" onclick="ctrlIng()">
     </div>
     </header>
     <section>
