@@ -1,8 +1,6 @@
-//El texto comentado con el comentario al margen es para quitar los botones procedentes del ejercicio original
 
 
 window.onload = function () {
-    // Variables
     const IMAGENES = [
         'img/garbera.jpg',
         'img/garbera2.jpg',
@@ -10,18 +8,11 @@ window.onload = function () {
     ];
     const TIEMPO_INTERVALO_MILESIMAS_SEG = 2000;
     let posicionActual = 0;
-//    let $botonRetroceder = document.querySelector('#retroceder');
-//    let $botonAvanzar = document.querySelector('#avanzar');
+
     let $imagenes = document.querySelector('#imagenes');
-//    let $botonPlay = document.querySelector('#play');
-//    let $botonStop = document.querySelector('#stop');
+
     let intervalo;
 
-    // Funciones
-
-    /**
-     * Funcion que cambia la foto en la siguiente posicion
-     */
     function pasarFoto() {
         if(posicionActual >= IMAGENES.length - 1) {
             posicionActual = 0;
@@ -31,9 +22,6 @@ window.onload = function () {
         renderizarImagen();
     }
 
-    /**
-     * Funcion que cambia la foto en la anterior posicion
-     */
     function retrocederFoto() {
         if(posicionActual <= 0) {
             posicionActual = IMAGENES.length - 1;
@@ -43,48 +31,23 @@ window.onload = function () {
         renderizarImagen();
     }
 
-    /**
-     * Funcion que actualiza la imagen de imagen dependiendo de posicionActual
-     */
     function renderizarImagen () {
         $imagenes.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
     }
 
-    /**
-     * Activa el autoplay de la imagen
-     */
     function playIntervalo() {
         intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
-        // Desactivamos los botones de control
-//        $botonAvanzar.setAttribute('disabled', true);
-//        $botonRetroceder.setAttribute('disabled', true);
-//        $botonPlay.setAttribute('disabled', true);
-//        $botonStop.removeAttribute('disabled');
-
     }
 
-    /**
-     * Para el autoplay de la imagen
-     */
     function stopIntervalo() {
         clearInterval(intervalo);
-        // Activamos los botones de control
-//        $botonAvanzar.removeAttribute('disabled');
-//        $botonRetroceder.removeAttribute('disabled');
-//        $botonPlay.removeAttribute('disabled');
-//        $botonStop.setAttribute('disabled', true);
     }
 
-    // Eventos
-//    $botonAvanzar.addEventListener('click', pasarFoto);
-//    $botonRetroceder.addEventListener('click', retrocederFoto);
-//    $botonPlay.addEventListener('click', playIntervalo);
- //   $botonStop.addEventListener('click', stopIntervalo);
-    // Iniciar
     renderizarImagen();
     playIntervalo();
 } 
 
+//permite introducir solo números
 function Numeros(string){
     var out = ''
     var filtro = '1234567890'
@@ -96,6 +59,7 @@ function Numeros(string){
     return out
 }
 
+//permite introducir numeros y letras
 function NumText(string){
     var out = '';
     
@@ -107,6 +71,7 @@ function NumText(string){
     return out;
 }
 
+//permite introducir caracteres usuales en URLs
 function TextURL(string){
     var out = '';
     
@@ -118,31 +83,24 @@ function TextURL(string){
     return out;
 }
 
-/*
-function validURL(str) {
-    var pattern = new RegExp(" ^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$");
-    
-    return !!pattern.test(str);
-}
-*/
-
+//establece la variable de sesión del traductor como 'Esp'
 function ctrlEsp(){
     sessionStorage.setItem('translate','Esp')
     cambiarEsp()
     return sessionStorage.getItem('translate')
 }
+//establece la variable de sesión del traductor como 'Ing'
 function ctrlIng(){
     sessionStorage.setItem('translate','Ing')
     cambiarIng()
     return sessionStorage.getItem('translate')
 }
 
+//cada vez que carga el documento, si la variable de sesión es 'Ing' traduce la página al inglés
 $(document).ready(function(){
-    
     if(sessionStorage.getItem('translate')=='Esp'){
         cambiarEsp()
     }else{
         cambiarIng()
     }
-        
 })
