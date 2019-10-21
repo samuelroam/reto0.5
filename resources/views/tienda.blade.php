@@ -48,19 +48,18 @@
     <button class="boton"><a class="trn" data-trn-key="añadir" href="<?php echo route('añadir');?>">Añadir Producto</a></button>
     <button class="boton"><a class="trn" data-trn-key="ver" href="/productos/<?php echo $_SESSION['tienda']?>">Ver Productos</a></button><br><br>
     <div id="container">
-      <?php
-      if(isset($productos)){
-      foreach ($productos as $producto) {
-      echo "<div class='product'>
-        <img src='/img/productos/".$producto->imagen."'><br><br>
-        Nombre: ".$producto->nombre."<br>Descripcion: ".$producto->descripcion."<br>Stock: ".$producto->stock."<br>Enlace: <a href='".$producto->enlace."'>".$producto->enlace."</a>
+    @if(isset($productos))
+      @foreach ($productos as $producto) 
+      <div class='product'>
+        <img src='/img/productos/{{$producto->imagen}}'><br><br>
+        Nombre: {{$producto->nombre}}<br>Descripcion: {{$producto->descripcion}}<br>Stock: {{$producto->stock}}<br>Enlace: <a href='{{$producto->enlace}}'>{{$producto->enlace}}</a>
         <br><br>
-        <button class='update'><a href='/tienda/destroy/".$producto->id."'>Eliminar</a></button>
-        <button class='update'><a href='/cambiar_stock/".$producto->id."'>Cambiar stock</a></button>
-      </div>";
-      }
-      }
-      ?>
+        <button class='update'><a href='/tienda/destroy/{{$producto->id}}'>Eliminar</a></button>
+        <button class='update'><a href='/cambiar_stock/{{$producto->id}}'>Cambiar stock</a></button>
+      </div>
+      @endforeach
+    @endif
+      
     </div>
     <footer>
       <div>
