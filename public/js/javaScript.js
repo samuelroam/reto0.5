@@ -100,7 +100,7 @@ function ctrlIng(){
 $(document).ready(function(){
     if(sessionStorage.getItem('translate')=='Esp'){
         cambiarEsp()
-    }else{
+    }else if(sessionStorage.getItem('translate')=='Ing'){
         cambiarIng()
     }
 })
