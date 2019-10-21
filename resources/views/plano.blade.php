@@ -12,13 +12,13 @@
     
     <header>
         <div id="icono">
-            <a href="<?php echo route('landing');?>"><img src="{{ url('img/icono.jpg')}}"></a>
+            <a href="{{route('landing')}}"><img src="{{ url('img/icono.jpg')}}"></a>
         </div>
         <div id=infobasica>
             <p class="trn" data-trn-key="horario" >Abierto de 10:00 a 22:00</p>
         </div>
         <div id="botones">
-            <button class="boton"><a class="trn" data-trn-key="inicio" href="<?php echo route('landing');?>">Inicio</a></button>
+            <button class="boton"><a class="trn" data-trn-key="inicio" href="{{ route('landing')}}">Inicio</a></button>
         </div>
         <div id=traductores>
         <input type="image" src="img/esp.jpg" class="bandera" onclick="ctrlEsp()">

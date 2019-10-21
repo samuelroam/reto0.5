@@ -20,15 +20,15 @@
     
     <header>
       <div id="icono">
-        <a href="<?php echo route('landing');?>"><img src="{{ url('img/icono.jpg')}}"></a>
+        <a href="{{route('landing')}}"><img src="{{ url('img/icono.jpg')}}"></a>
       </div>
       <div id=infobasica>
         <p class="trn" data-trn-key="horario">Abierto de 10:00 a 22:00</p>
       </div>
       
       <div id="botones">
-        <button class="boton"><a class="trn" data-trn-key="inicio" href="<?php echo route('landing');?>">Inicio</a></button>
-        <button class="boton"><a class="trn" data-trn-key="tiendas" href="<?php echo route('tiendas');?>">Tiendas</a></button>
+        <button class="boton"><a class="trn" data-trn-key="inicio" href="{{route('landing')}}">Inicio</a></button>
+        <button class="boton"><a class="trn" data-trn-key="tiendas" href="{{route('tiendas')}}">Tiendas</a></button>
       </div>
       <div id=traductores>
         <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="ctrlEsp()">
@@ -45,8 +45,8 @@
     elseif ($_SESSION["tienda"]==3) {
     echo "Eroski";
     } ?></h1><br>
-    <button class="boton"><a class="trn" data-trn-key="añadir" href="<?php echo route('añadir');?>">Añadir Producto</a></button>
-    <button class="boton"><a class="trn" data-trn-key="ver" href="/productos/<?php echo $_SESSION['tienda']?>">Ver Productos</a></button><br><br>
+    <button class="boton"><a class="trn" data-trn-key="añadir" href="{{route('añadir')}}">Añadir Producto</a></button>
+    <button class="boton"><a class="trn" data-trn-key="ver" href="/productos/{{$_SESSION['tienda']}}">Ver Productos</a></button><br><br>
     <div id="container">
     @if(isset($productos))
       @foreach ($productos as $producto) 

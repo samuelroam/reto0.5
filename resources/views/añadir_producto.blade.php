@@ -13,15 +13,15 @@
     
     <header>
         <div id="icono">
-            <a href="<?php echo route('landing');?>"><img src="{{ url('img/icono.jpg')}}"></a>
+            <a href="{{route('landing')}}"><img src="{{ url('img/icono.jpg')}}"></a>
         </div>
         <div id=infobasica>
             <p class="trn" data-trn-key="horario">Abierto de 10:00 a 22:00</p>
         </div>
         <div id="botones">
-            <button class="boton"><a class="trn" data-trn-key="inicio" href="<?php echo route('landing');?>">Inicio</a></button>
-            <button class="boton"><a class="trn" data-trn-key="tiendas" href="<?php echo route('tiendas');?>">Tiendas</a></button>
-            <button class="boton"><a class="trn" data-trn-key="tienda" href="<?php echo route('tienda');?>">Tienda</a></button>
+            <button class="boton"><a class="trn" data-trn-key="inicio" href="{{route('landing')}}">Inicio</a></button>
+            <button class="boton"><a class="trn" data-trn-key="tiendas" href="{{route('tiendas')}}">Tiendas</a></button>
+            <button class="boton"><a class="trn" data-trn-key="tienda" href="{{route('tienda')}}">Tienda</a></button>
 
         </div>
         <div id=traductores>
@@ -39,7 +39,7 @@
       <p>Stock: </p><input type="numeric" name="stock" onkeyup="this.value=Numeros(this.value)" required><br><br>
       <p class="trn" data-trn-key="imagen">Imagen: </p><input type="file" id="photo" name="photo" required><br><br>
       <p class="trn" data-trn-key="enlace">Enlace: </p><input type="text" name="enlace" onkeyup="this.value=TextURL(this.value)" required><br><br>
-      <input type="hidden" name="id" value="<?php echo $_SESSION['tienda'] ?>">
+      <input type="hidden" name="id" value="{{$_SESSION['tienda']}}">
         <button id="send" class="trn" data-trn-key="enviar">Enviar</button>
     </form>
     </section>
