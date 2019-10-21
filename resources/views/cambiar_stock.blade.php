@@ -31,7 +31,7 @@
     <section>
       <form action="{{route('update')}}" method="post">
         @csrf
-      Stock: <input type="text" name="stock"><br><br>
+      <p>Stock: </p><input type="numeric" name="stock" onkeyup="this.value=Numeros(this.value)" required><br><br>
         <input type="hidden" name="id" value="<?php echo $id;?>">
         <button class="trn" data-trn-key="enviar">Enviar</button>
     </form>
