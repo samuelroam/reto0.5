@@ -3,9 +3,10 @@
 <head>
     <title>Plano</title>
     <link href="css/estilos.css" rel="stylesheet" />
-    <script src="js/jquery.js"></script>
+    <script src="{{ url('/js/jquery.js')}}"></script>
     <script src="js/jquery.translate.js"></script>
     <script src="js/diccionario.js"></script>
+    <script src="js/javaScript.js"></script>
 </head>
 <body>
     
@@ -20,8 +21,8 @@
             <button class="boton"><a class="trn" data-trn-key="inicio" href="<?php echo route('landing');?>">Inicio</a></button>
         </div>
         <div id=traductores>
-        <input type="image" src="img/esp.jpg" class="bandera" onclick="cambiarEsp()">
-        <input type="image" src="img/ing.png" class="bandera" onclick="cambiarIng()">
+        <input type="image" src="img/esp.jpg" class="bandera" onclick="ctrlEsp()">
+        <input type="image" src="img/ing.png" class="bandera" onclick="ctrlIng()">
     </div>
     </header>
     <section>
