@@ -9,6 +9,8 @@
     <script src="{{ url('/js/javaScript.js') }}"></script>
     <?php session_start();
     session_destroy(); ?>
+
+
 </head>
 <body>
     
@@ -28,8 +30,8 @@
         </div>
 
         <div id=traductores>
-        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">
-        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="cambiarIng()">
+        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="ctrlEsp()">
+        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="ctrlIng()">
         </div>
 
     </header>

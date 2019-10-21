@@ -6,6 +6,7 @@
     <script src="{{ url('/js/jquery.js')}}"></script>
     <script src="{{ url('/js/jquery.translate.js') }}"></script>
     <script src="{{ url('/js/diccionario.js') }}"></script>
+    <script src="{{ url('/js/javaScript.js') }}"></script>
     <?php 
     session_start();
     session_destroy();?>
@@ -25,8 +26,8 @@
             <button class="boton"><a class="trn" data-trn-key="inicio" href="<?php echo route('landing');?>">Inicio</a></button>
         </div>
         <div id=traductores>
-        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="cambiarEsp()">
-        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="cambiarIng()">
+        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="ctrlEsp()">
+        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="ctrlIng()">
     </div>
 
     </header>

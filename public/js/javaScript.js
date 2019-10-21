@@ -125,3 +125,24 @@ function validURL(str) {
     return !!pattern.test(str);
 }
 */
+
+function ctrlEsp(){
+    sessionStorage.setItem('translate','Esp')
+    cambiarEsp()
+    return sessionStorage.getItem('translate')
+}
+function ctrlIng(){
+    sessionStorage.setItem('translate','Ing')
+    cambiarIng()
+    return sessionStorage.getItem('translate')
+}
+
+$(document).ready(function(){
+    
+    if(sessionStorage.getItem('translate')=='Esp'){
+        cambiarEsp()
+    }else{
+        cambiarIng()
+    }
+        
+})
