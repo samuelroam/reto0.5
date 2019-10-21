@@ -1,54 +1,6 @@
 
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-<head>
-    <title>Inicio</title>
-    <link href="{{ url('/css/estilos.css') }}" rel="stylesheet" />
-    <script src="{{ url('/js/jquery.js')}}"></script>
-    <script src="{{ url('/js/jquery.translate.js') }}"></script>
-    <script src="{{ url('/js/diccionario.js') }}"></script>
-    <script src="{{ url('/js/javaScript.js') }}"></script>
-    <?php session_start();
-    session_destroy(); ?>
-
-
-</head>
-<body>
-    
-    @section('encabezado')
-        
-    
-    
-    <header>
-        <div id="icono">
-            <a href="<?php echo route('landing');?>"><img src="{{ url('img/icono.jpg')}}"></a>
-        </div>
-        <div id=infobasica>
-            <p class="trn" data-trn-key="horario">Abierto de 10:00 a 22:00</p>
-        </div>
-        
-        <div id="botones">
-            <button class="boton"><a class="trn" data-trn-key="plano" href="<?php echo route('plano');?>">Plano</a></button>
-            <button class="boton"><a class="trn" data-trn-key="tiendas" href="<?php echo route('tiendas');?>">Tiendas</a></button>
-        </div>
-
-        <div id=traductores>
-        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="ctrlEsp()">
-        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="ctrlIng()">
-        </div>
-
-    </header>
-
-        
-    @show
-    <section>
-       <div class="carousel">
-            
-            <div id="imagenes"></div>
-            
-        </div>
-=======
     <head>
         <title>Inicio</title>
         <link href="{{ url('/css/estilos.css') }}" rel="stylesheet" />
@@ -61,7 +13,6 @@
     </head>
     <body>
         
->>>>>>> 0a68c8b5bb500f5f0461fdf8a075fac94b6c708f
         
         <header>
             <div id="icono">
