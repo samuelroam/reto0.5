@@ -1,6 +1,6 @@
 <header>
         <div id="icono">
-            <a href="{{route('landing')}}"><img src="{{ url('img/icono.jpg')}}"></a>
+            <a href="{{route('landing')}}"><img src="{{ url('img/icono.png')}}"></a>
         </div>
         <div id=infobasica>
             <p class="trn" data-trn-key="horario">Abierto de 10:00 a 22:00</p>
