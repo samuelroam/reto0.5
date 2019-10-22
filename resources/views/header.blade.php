@@ -13,10 +13,14 @@
 
 </head>
 <body>
-@yield('encabezado')    
+ 
+
+    
 
 <header>
-
+    
+        
+    
 
         <div id="icono">
             <img src="img/icono.jpg">
@@ -37,5 +41,6 @@
 
 
     </header>
+    
     </body>
     </html>

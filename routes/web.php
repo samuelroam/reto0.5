@@ -43,8 +43,3 @@ Route::get("/cambiar_stock/{id}",function($id){
 })->name("stock");
 
 Route::post("/cambiar_stock/cambiar","ProductController@update")->name("update");
-
-
-Route::get("/prueba",function(){
-	return view("prueba");
-})->name("prueba");
