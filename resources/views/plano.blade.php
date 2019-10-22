@@ -10,7 +10,7 @@
     <script src="js/javaScript.js"></script>
 </head>
 <body>
-    {{--@include('header')--}}
+    @include('header')
         
     
     <header>
