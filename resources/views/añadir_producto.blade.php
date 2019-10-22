@@ -25,31 +25,32 @@
 
         </div>
         <div id=traductores>
-            <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="ctrlEsp()">
-            <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="ctrlIng()">
-    </div>
+            <h4>Idiomas</h4>
+            <a href="#" class="bandera" onclick="ctrlEsp()">ESP</a>
+            <a href="#" class="bandera" onclick="ctrlIng()">EN</a>
+        </div>
 
     </header>
     <section>
       <form action="{{route('add')}}" enctype="multipart/form-data" method="post">
         @csrf
 
-      <p class="trn" data-trn-key="nombre">Nombre: </p><input type="text" name="nombre" onkeyup="this.value=NumText(this.value)" required><br><br>
-      <p class="trn" data-trn-key="descripcion">Descripción: </p><textarea name="comentarios" onkeyup="this.value=NumText(this.value)" required></textarea> <br><br>
-      <p>Stock: </p><input type="numeric" name="stock" onkeyup="this.value=Numeros(this.value)" required><br><br>
-      <p class="trn" data-trn-key="imagen">Imagen: </p><input type="file" id="photo" name="photo" required><br><br>
-      <p class="trn" data-trn-key="enlace">Enlace: </p><input type="text" name="enlace" onkeyup="this.value=TextURL(this.value)" required><br><br>
-      <input type="hidden" name="id" value="{{$_SESSION['tienda']}}">
+        <p class="trn" data-trn-key="nombre">Nombre: </p><input type="text" name="nombre" onkeyup="this.value=NumText(this.value)" required><br><br>
+        <p class="trn" data-trn-key="descripcion">Descripción: </p><textarea name="comentarios" onkeyup="this.value=NumText(this.value)" required></textarea> <br><br>
+        <p>Stock: </p><input type="numeric" name="stock" onkeyup="this.value=Numeros(this.value)" required><br><br>
+        <p class="trn" data-trn-key="imagen">Imagen: </p><input type="file" id="photo" name="photo" required><br><br>
+        <p class="trn" data-trn-key="enlace">Enlace: </p><input type="text" name="enlace" onkeyup="this.value=TextURL(this.value)" required><br><br>
+        <input type="hidden" name="id" value="{{$_SESSION['tienda']}}">
         <button id="send" class="trn" data-trn-key="enviar">Enviar</button>
     </form>
-    </section>
-    <footer>
-        <div>
-            <p class="trn" data-trn-key="footer1" >Landing page realizada por Samuel</p>
-            <p class="trn" data-trn-key="footer2" >Grupo Garbera</p>
-            <p class="trn" data-trn-key="footer3" >Reto 0.5</p>
-        </div>
-    </footer>
+</section>
+<footer>
+    <div>
+        <p class="trn" data-trn-key="footer1" >Landing page realizada por Samuel</p>
+        <p class="trn" data-trn-key="footer2" >Grupo Garbera</p>
+        <p class="trn" data-trn-key="footer3" >Reto 0.5</p>
+    </div>
+</footer>
 
 </body>
 </html>

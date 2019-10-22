@@ -4,10 +4,14 @@
 body{
 	background-color: #F8F8e3;
 }
-.bandera{
+.bandera a{
 	width: 2vw;
-	float: right;
 }
+
+.bandera:visited{
+	color: blue;
+}
+
 header{
 	background-color: #D3D3D3;
 	display: flex;
@@ -24,6 +28,7 @@ header{
 }
 #traductores{
 	flex:1 1 10%;
+	text-align: center;
 	
 }
 #infobasica{

@@ -27,8 +27,9 @@
                 <button class="boton"><a class="trn" data-trn-key="tiendas" href="{{route('tiendas')}}">Tiendas</a></button>
             </div>
             <div id=traductores>
-                <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="ctrlEsp()">
-                <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="ctrlIng()">
+                <h4>Idiomas</h4>
+                <a href="#" class="bandera" onclick="ctrlEsp()">ESP</a>
+                <a href="#" class="bandera" onclick="ctrlIng()">EN</a>
             </div>
         </header>
         <section>
