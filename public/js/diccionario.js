@@ -107,6 +107,18 @@ var translator = $('body').translate({lang: "es", t: dict});
 			es: "Cambiar Stock",
 			en: "Change Stock",
 		},
+		"nombre": {
+			es: "Nombre:",
+			en: "Name:",
+		},
+		"descripcion":{
+			es: "Descripcion:",
+			en: "Description:",
+		},
+		"enlace":{
+			es: "Enlace:",
+			en: "Link:",
+		},
 
 		"": {
 			es: "",
