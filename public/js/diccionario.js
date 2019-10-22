@@ -119,6 +119,10 @@ var translator = $('body').translate({lang: "es", t: dict});
 			es: "Enlace:",
 			en: "Link:",
 		},
+		"idioma": {
+			es: "Idiomas",
+			en: "Language",
+		},
 
 		"": {
 			es: "",

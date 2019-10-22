@@ -11,7 +11,7 @@
             <button class="boton"><a class="trn" data-trn-key="tiendas" href="{{route('tiendas')}}">Tiendas</a></button>
         </div>
         <div id=traductores>
-            <h4>Idiomas</h4>
+            <h4 class="trn" data-trn-key="idioma">Idiomas</h4>
             <a href="#" class="bandera" onclick="ctrlEsp()">ESP</a>
             <a href="#" class="bandera" onclick="ctrlIng()">EN</a>
         </div>
