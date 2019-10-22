@@ -50,7 +50,7 @@
   <br><br>
   <div id="container">
     @if(isset($productos))
-<<<<<<< HEAD
+
       @foreach ($productos as $producto) 
       <div class='product'>
         <img src='/img/productos/{{$producto->imagen}}'><br><br>
@@ -60,17 +60,7 @@
         <button class='update'><a class="trn" data-trn-key="cambiar" href='/cambiar_stock/{{$producto->id}}'>Cambiar stock</a></button>
       </div>
       @endforeach
-=======
-    @foreach ($productos as $producto) 
-    <div class='product'>
-      <img src='/img/productos/{{$producto->imagen}}'><br><br>
-      Nombre: {{$producto->nombre}}<br>Descripcion: {{$producto->descripcion}}<br>Stock: {{$producto->stock}}<br>Enlace: <a href='{{$producto->enlace}}'>{{$producto->enlace}}</a>
-      <br><br>
-      <button class='update'><a href='/tienda/destroy/{{$producto->id}}'>Eliminar</a></button>
-      <button class='update'><a href='/cambiar_stock/{{$producto->id}}'>Cambiar stock</a></button>
-    </div>
-    @endforeach
->>>>>>> 6d30167654f18d4f50225aa5c9609a0e2119f066
+
     @endif
     
   </div>
