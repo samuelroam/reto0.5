@@ -126,6 +126,8 @@ h1 p{
 	}
 	#botones{
 		flex: 40%;
+		display:flex;
+		flex-direction: column;
 	}
 	#traductores{
 		flex: 40%;
