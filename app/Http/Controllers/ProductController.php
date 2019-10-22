@@ -46,17 +46,17 @@ class ProductController extends Controller
         $imagen = "";
         $enlace=$request->input("enlace");
         $id=$request->input("id");
-   
+
         $imagen = $request->file('photo')->getClientOriginalName();
         $request->file("photo")->move("img/productos",$imagen);
-            
-    
-       
+
+
+
 
         Producto::insert([
             ["nombre"=>$nombre,"descripcion"=>$descripcion,"stock"=>$stock,"imagen"=>$imagen,"enlace"=>$enlace,"id_tienda"=>$id]
         ]);
-        return view("tienda");
+        return redirect("/productos/$id");
     }
 
     /**
@@ -90,11 +90,15 @@ class ProductController extends Controller
      */
     public function update(Request $request)
     {
-     $stock=$request->input("stock");
-     $id=$request->input("id");
-     Producto::where("id",$id)->update(["stock"=>$stock]);
-     return view("tienda");
- }
+       $stock=$request->input("stock");
+       $id=$request->input("id");
+       Producto::where("id",$id)->update(["stock"=>$stock]);
+       $productos=Producto::all()->where("id",$id);
+       foreach ($productos as $producto) {
+           return redirect("/productos/$producto->id_tienda");
+       }
+
+   }
 
     /**
      * Remove the specified resource from storage.
@@ -105,10 +109,11 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $productos = Producto::all()->where("id","=",$id);
-         foreach ($productos as $producto) {
-           unlink("/home/xlazkano/laravel/reto/public/img/productos/".$producto->imagen);
-         }
-        Producto::where("id",$id)->delete();
-        return view("tienda");
-    }
+        foreach ($productos as $producto) {
+         unlink("/home/xlazkano/laravel/reto/public/img/productos/".$producto->imagen);
+         Producto::where("id",$id)->delete();
+         return redirect("/productos/$producto->id_tienda");
+     }
+
+ }
 }
