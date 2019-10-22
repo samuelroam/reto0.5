@@ -26,15 +26,16 @@
             <button class="boton"><a class="trn" data-trn-key="inicio" href="{{route('landing')}}">Inicio</a></button>
         </div>
         <div id=traductores>
-        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="ctrlEsp()">
-        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="ctrlIng()">
-    </div>
+            <h4>Idiomas</h4>
+            <a href="#" class="bandera" onclick="ctrlEsp()">ESP</a>
+            <a href="#" class="bandera" onclick="ctrlIng()">EN</a>
+        </div>
 
     </header>
     <section>
       <form action="{{route('select')}}" method="post">
         @csrf
-      <legend class="trn" data-trn-key="legend">¿En que tienda trabajas?</legend>
+        <legend class="trn" data-trn-key="legend">¿En que tienda trabajas?</legend>
         <select size="1" name="tiendas" id="lista">
             <option value="1">Zara</option>
             <option value="2">MediaMarkt</option>
@@ -42,14 +43,14 @@
         </select><br>
         <button class="trn" data-trn-key="enviar">Enviar</button>
     </form>
-    </section>
-    <footer>
-        <div>
-            <p class="trn" data-trn-key="footer1">Landing page realizada por Samuel</p>
-            <p class="trn" data-trn-key="footer2">Grupo Garbera</p>
-            <p class="trn" data-trn-key="footer3">Reto 0.5</p>
-        </div>
-    </footer>
+</section>
+<footer>
+    <div>
+        <p class="trn" data-trn-key="footer1">Landing page realizada por Samuel</p>
+        <p class="trn" data-trn-key="footer2">Grupo Garbera</p>
+        <p class="trn" data-trn-key="footer3">Reto 0.5</p>
+    </div>
+</footer>
 
 </body>
 </html>

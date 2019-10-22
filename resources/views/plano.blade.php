@@ -21,12 +21,13 @@
             <button class="boton"><a class="trn" data-trn-key="inicio" href="{{ route('landing')}}">Inicio</a></button>
         </div>
         <div id=traductores>
-        <input type="image" src="img/esp.jpg" class="bandera" onclick="ctrlEsp()">
-        <input type="image" src="img/ing.png" class="bandera" onclick="ctrlIng()">
-    </div>
+            <h4>Idiomas</h4>
+            <a href="#" class="bandera" onclick="ctrlEsp()">ESP</a>
+            <a href="#" class="bandera" onclick="ctrlIng()">EN</a>
+        </div>
     </header>
     <section>
-    <div class="imagenes" align="center">
+        <div class="imagenes" align="center">
             <img src="img/garbera.PNG">
         </div>
     </section>
