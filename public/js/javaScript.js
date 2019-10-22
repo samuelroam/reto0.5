@@ -45,7 +45,7 @@ window.onload = function () {
 
     renderizarImagen();
     playIntervalo();
-} 
+} //https://programadorwebvalencia.com/javascript-carousel-sencillo-con-controles-y-autoreproduccion/
 
 //permite introducir solo números
 function Numeros(string){
