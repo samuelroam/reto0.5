@@ -46,7 +46,7 @@
     echo "Eroski";
     } ?></h1><br>
     <button class="boton"><a class="trn" data-trn-key="añadir" href="{{route('añadir')}}">Añadir Producto</a></button>
-    <button class="boton"><a class="trn" data-trn-key="ver" href="/productos/{{$_SESSION['tienda']}}">Ver Productos</a></button><br><br>
+    <br><br>
     <div id="container">
     @if(isset($productos))
       @foreach ($productos as $producto) 

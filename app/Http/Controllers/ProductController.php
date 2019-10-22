@@ -19,7 +19,7 @@ class ProductController extends Controller
     public function index($id)
     {
         $productos = Producto::all()->where("id_tienda","=",$id);
-        return view("tienda",["productos"=>$productos]);
+        return view("tienda",["productos"=>$productos,"id"=>$id]);
     }
 
     /**
