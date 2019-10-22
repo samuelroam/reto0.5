@@ -26,8 +26,8 @@ class ShopController extends Controller
     public function select(Request $request)
     {
         $tienda=$request->input("tiendas");
-        return view("tienda",["id"=>$tienda]);
-
+        //return view("tienda",["id"=>$tienda]);
+        return redirect("/productos/$tienda");
     }
 
     /**

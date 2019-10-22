@@ -11,31 +11,18 @@
 </head>
 <body>
     
-    <header>
-        <div id="icono">
-            <a href="{{route('landing')}}"><img src="{{ url('img/icono.jpg')}}"></a>
-        </div>
-        <div id=infobasica>
-            <p class="trn" data-trn-key="horario" >Abierto de 10:00 a 22:00 </p>
-        </div>
-        <div id="botones">
-             <button class="boton"><a class="trn" data-trn-key="inicio" href="{{route('landing')}}">Inicio</a></button>
-            <button class="boton"><a class="trn" data-trn-key="tiendas" href="{{route('tiendas')}}">Tiendas</a></button>
-            <button class="boton"><a class="trn" data-trn-key="tienda" href="{{route('tienda')}}">Tienda</a></button>
-        </div>
-        <div id=traductores>
-            <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="ctrlEsp()">
-            <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="ctrlIng()">
-        </div>
-    </header>
+    @include('header')
+
     <section>
-      <form action="{{route('update')}}" method="post">
-        @csrf
-      <p>Stock: </p><input type="numeric" name="stock" onkeyup="this.value=Numeros(this.value)" required><br><br>
-        <input type="hidden" name="id" value="{{$id}}">
-        <button class="trn" data-trn-key="enviar">Enviar</button>
-    </form>
+        <form action="{{route('update')}}" method="post">
+            @csrf
+            <p>Stock: </p><input type="numeric" name="stock" onkeyup="this.value=Numeros(this.value)" required><br><br>
+            <input type="hidden" name="id" value="{{$id}}">
+            <button class="trn" data-trn-key="enviar">Enviar</button>
+        </form>
     </section>
-    @include('footer')
+
+@include('footer')
+
 </body>
 </html>

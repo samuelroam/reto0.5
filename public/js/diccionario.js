@@ -99,6 +99,14 @@ var translator = $('body').translate({lang: "es", t: dict});
 			es: "Bienvenido a",
 			en: "Welcome to",
 		},
+		"eliminar": {
+			es: "Eliminar",
+			en: "Delete",
+		},
+		"cambiar": {
+			es: "Cambiar Stock",
+			en: "Change Stock",
+		},
 
 		"": {
 			es: "",

@@ -13,28 +13,12 @@
 </head>
 <body>
     
-
+    @include('header')
     
-    <header>
-        <div id="icono">
-            <a href="{{route('landing')}}"><img src="{{ url('img/icono.jpg')}}"></a>
-        </div>
-        <div id=infobasica>
-            <p class="trn" data-trn-key="horario" >Abierto de 10:00 a 22:00</p>
-        </div>
-        <div id="botones">
-            <button class="boton"><a class="trn" data-trn-key="inicio" href="{{route('landing')}}">Inicio</a></button>
-        </div>
-        <div id=traductores>
-        <input type="image" src="{{ url('img/esp.jpg')}}" class="bandera" onclick="ctrlEsp()">
-        <input type="image" src="{{ url('img/ing.png')}}" class="bandera" onclick="ctrlIng()">
-    </div>
-
-    </header>
     <section>
       <form action="{{route('select')}}" method="post">
         @csrf
-      <legend class="trn" data-trn-key="legend">¿En que tienda trabajas?</legend>
+        <legend class="trn" data-trn-key="legend">¿En que tienda trabajas?</legend>
         <select size="1" name="tiendas" id="lista">
             <option value="1">Zara</option>
             <option value="2">MediaMarkt</option>
@@ -43,6 +27,7 @@
         <button class="trn" data-trn-key="enviar">Enviar</button>
     </form>
     </section>
+
     @include('footer')
 
 </body>
