@@ -2,8 +2,8 @@ var translator = $('body').translate({lang: "es", t: dict});
 	var dict={
 		
 		"horario": {
-			es: "Abierto de 10:00 a 22:00",
-			en: "Open from 10:00 to 22:00",
+			es: "Abierto de Lunes a Sábado de 10:00 a 22:00",
+			en: "Open from Monday to Saturday from 10:00 to 22:00",
 		},
 		"inicio": {
 			es: "Inicio",
@@ -52,8 +52,8 @@ var translator = $('body').translate({lang: "es", t: dict});
 			en: "Shoe and footwear store",
 		},
 		"footer1": {
-			es: "Landing page realizada por Samuel",
-			en: "Landing page done by Samuel",
+			es: "Página Web realizada por Samuel R., Xabier L. y Xabier J.",
+			en: "Web Page done by Samuel R., Xabier L. and Xabier J.",
 		},
 		"footer2": {
 			es: "Grupo Garbera",
@@ -122,6 +122,10 @@ var translator = $('body').translate({lang: "es", t: dict});
 		"idioma": {
 			es: "Idiomas",
 			en: "Language",
+		},
+		"direccion": {
+			es: "Dirección: Cruce Garbera 1, Donostia-San Sebastián",
+			en: "Address: Garbera Crossing 1, Donostia-San Sebastian",
 		},
 
 		"": {

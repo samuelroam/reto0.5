@@ -3,7 +3,8 @@
             <a href="{{route('landing')}}"><img src="{{ url('img/icono.png')}}"></a>
         </div>
         <div id=infobasica>
-            <p class="trn" data-trn-key="horario">Abierto de 10:00 a 22:00</p>
+            <p class="trn" data-trn-key="horario">Abierto de Lunes a Sábado de 10:00 a 22:00</p>
+            <p class="trn" data-trn-key="direccion">Dirección: Cruce Garbera 1, Donostia-San Sebastián</p>
         </div>
         
         <div id="botones">
