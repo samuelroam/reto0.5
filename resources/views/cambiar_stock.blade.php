@@ -16,7 +16,7 @@
     <section>
         <form action="{{route('update')}}" method="post">
             @csrf
-            <p>Stock: </p><input type="numeric" name="stock" onkeyup="this.value=Numeros(this.value)" required><br><br>
+            <p>Stock: </p><input type="numeric" name="stock" onkeyup="this.value=Numeros(this.value)" value="{{$stock}}" required><br><br>
             <input type="hidden" name="id" value="{{$id}}">
             <button class="trn" data-trn-key="enviar">Enviar</button>
         </form>

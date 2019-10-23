@@ -36,10 +36,13 @@ Route::post("/tiendas/select","ShopController@select")->name("select");
 Route::get('/productos/{id}',"ProductController@index");
 
 Route::post("/añadir_producto/store/","ProductController@store")->name("add");
+
+Route::get("/eliminar/{id}",function($id){
+	return view("eliminar",["id"=>$id]);
+});
+
 Route::get("/tienda/destroy/{id}","ProductController@destroy")->name("delete");
 
-Route::get("/cambiar_stock/{id}",function($id){
-	return view("cambiar_stock",["id"=>$id]);
-})->name("stock");
+Route::get("/cambiar_stock/{id}","ProductController@edit");
 
 Route::post("/cambiar_stock/cambiar","ProductController@update")->name("update");

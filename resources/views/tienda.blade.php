@@ -39,7 +39,7 @@
       <img src='/img/productos/{{$producto->imagen}}'><br><br>
       <span class="trn" data-trn-key="nombre">Nombre: </span>{{$producto->nombre}}<br><span class="trn" data-trn-key="descripcion">Descripcion: </span>{{$producto->descripcion}}<br>Stock: {{$producto->stock}}<br><span class="trn" data-trn-key="enlace">Enlace: </span><a href='{{$producto->enlace}}'>{{$producto->enlace}}</a>
       <br><br>
-      <button class='update'><a class="trn" data-trn-key="eliminar" href='/tienda/destroy/{{$producto->id}}'>Eliminar</a></button>
+      <button class='update'><a class="trn" data-trn-key="eliminar" href='/eliminar/{{$producto->id}}'>Eliminar</a></button>
       <button class='update'><a class="trn" data-trn-key="cambiar" href='/cambiar_stock/{{$producto->id}}'>Cambiar stock</a></button>
     </div>
     @endforeach

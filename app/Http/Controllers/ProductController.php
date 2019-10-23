@@ -67,7 +67,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+       
     }
 
     /**
@@ -78,7 +78,10 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+         $productos = Producto::all()->where("id","=",$id);
+        foreach ($productos as $producto) {
+            return view("cambiar_stock",["id"=>$id,"stock"=>$producto->stock]);
+        }
     }
 
     /**
