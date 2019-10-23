@@ -1,11 +1,14 @@
 
 
 window.onload = function () {
+    //poner aquí la ruta de las imágenes que aparecerán en el carrusel
     const IMAGENES = [
         'img/garbera.jpg',
         'img/garbera2.jpg',
-        'img/garbera3.JPG'
+        'img/garbera3.jpg'
     ];
+    //este es el tiempo que permanece la imagen antes de cambiar a la siguiene
+    //en milisegundos (2000ms=2s)
     const TIEMPO_INTERVALO_MILESIMAS_SEG = 2000;
     let posicionActual = 0;
 
