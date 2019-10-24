@@ -8,7 +8,7 @@ body{
 	width: 2vw;
 }
 
-.bandera:visited{
+.bandera:visited{		/*Al clicar sobre un enlace, este cambia de color*/
 	color: blue;
 }
 
@@ -54,7 +54,7 @@ button a{
 	border-radius: 6px;
 	border: 2px solid #0016b0;
 }
-.boton:hover{
+.boton:hover{				/* Cuando la cursor pase por encima del boton, cambia de color*/
 	background-color: #ffffff;
 }
 .boton:hover a{
@@ -121,7 +121,7 @@ footer p{
 h1 p{
 	display: inline-block;
 }
-@media (max-width: 900px){
+@media (max-width: 900px){   /* Una vez la página baje de los 900px de ancho, se adaptara con los siguiente cambios*/
 	
 
 	.tiendas{
@@ -143,7 +143,7 @@ h1 p{
 	}
 }
 
-	@media (max-width: 600px){
+	@media (max-width: 600px){	/* Una vez la página baje de los 600px de ancho, se adaptara con los siguiente cambios*/
 		header{
 			flex-direction: column;
 		}
