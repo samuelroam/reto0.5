@@ -127,6 +127,10 @@ var translator = $('body').translate({lang: "es", t: dict});
 			es: "Dirección: Cruce Garbera 1, Donostia-San Sebastián",
 			en: "Address: Garbera Crossing 1, Donostia-San Sebastian",
 		},
+		"confirmacion": {
+			es: "Pulsa el siguiente botón si estas seguro de que quieres eliminar el producto.",
+			en: "Press the following button if you are sure that you want to delete the product.",
+		},
 
 		"": {
 			es: "",
