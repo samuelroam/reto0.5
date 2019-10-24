@@ -14,7 +14,7 @@
 <body>
     
     @include('header')
-    
+    <!--Mediante este formulario obtenemos el id de la tienda y lo mandamos mediante la ruta "select" -->
     <section>
       <form action="{{route('select')}}" method="post">
         @csrf

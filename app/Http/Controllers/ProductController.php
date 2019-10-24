@@ -16,9 +16,13 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //Mediante este metodo seleccionamos todos los productos de una tienda
     public function index($id)
     {
         $productos = Producto::all()->where("id_tienda","=",$id);
+
+        //Devolvemos los productos y el id de la tienda
         return view("tienda",["productos"=>$productos,"id"=>$id]);
     }
 
@@ -33,13 +37,14 @@ class ProductController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Añade un nuevo producto
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  \Illuminate\Http\Request  $request Los datos recibidos desde el formulario
+     * 
      */
     public function store(Request $request)
     {
+        //Guardamos los valores enviados por el formulario en variables
         $nombre=$request->input("nombre");
         $descripcion=$request->input("comentarios");
         $stock=$request->input("stock");
