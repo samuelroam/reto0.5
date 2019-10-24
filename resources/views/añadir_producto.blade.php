@@ -14,6 +14,7 @@
     @include('header')
 
     <section>
+        <!-- Formulario para añadir un nuevo producto -->
       <form action="{{route('add')}}" enctype="multipart/form-data" method="post">
         @csrf
 

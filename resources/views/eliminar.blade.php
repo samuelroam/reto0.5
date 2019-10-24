@@ -20,7 +20,7 @@
   
   @include('header')
   
-  
+  <!-- Para evitar eliminar un producto por error hemos añadido una confirmación -->
   <div id="eliminar">
    <p class="trn" data-trn-key="confirmacion">Pulsa el siguiente botón si estas seguro de que quieres eliminar el producto.</p>
    <button class='update'><a class="trn" data-trn-key="eliminar" href='/tienda/destroy/{{$id}}'>Eliminar</a></button>

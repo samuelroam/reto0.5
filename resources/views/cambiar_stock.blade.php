@@ -12,7 +12,7 @@
 <body>
     
     @include('header')
-
+    <!-- Formulario para cambiar el stock de un producto -->
     <section>
         <form action="{{route('update')}}" method="post">
             @csrf
