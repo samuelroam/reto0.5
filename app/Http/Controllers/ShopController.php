@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class ShopController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Vuelve a la view "tiendas"
      *
      * @return \Illuminate\Http\Response
      */
@@ -18,7 +18,7 @@ class ShopController extends Controller
 
 
     /**
-     * Store a newly created resource in storage.
+     * Recibe el id de la tienda seleccionada y se lo envia a la vista "tienda"
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
