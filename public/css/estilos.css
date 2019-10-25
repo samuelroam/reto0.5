@@ -93,14 +93,13 @@ section{
 	display: flex;
 	justify-content: center;
 }
-#imagenes {
-	width: 70vw;
-	height: 400px;
-	background-size: cover;
+.imagenes {
+	flex: 100%;
+	text-align: center;
 	
 }
-#imagenes img{
-	width: 70vw;
+.imagenes img{
+	width: 70%;
 }
 #divtiendas{
 	display: flex;

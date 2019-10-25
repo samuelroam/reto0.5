@@ -14,7 +14,7 @@
     @include('header')
         
     <section>
-        <div class="imagenes" align="center">
+        <div class="imagenes">
             <img src="img/garbera.PNG">
         </div>
     </section>
