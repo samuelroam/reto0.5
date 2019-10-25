@@ -83,6 +83,12 @@ section{
 .product img{
 	width: 30%;
 }
+.product button a{
+	color: black;
+}
+.product a{
+	color: blue;
+}
 .carrusel{
 	display: flex;
 	justify-content: center;

@@ -39,7 +39,7 @@
       @foreach ($productos as $producto)
       <div class='product'>
         <img src='/img/productos/{{$producto->imagen}}'><br><br>
-        <span class="trn" data-trn-key="nombre">Nombre: </span>{{$producto->nombre}}<br><span class="trn" data-trn-key="descripcion">Descripcion: </span>{{$producto->descripcion}}<br>Stock: {{$producto->stock}}<br><span class="trn" data-trn-key="enlace">Enlace: </span><a href='{{$producto->enlace}}'>{{$producto->enlace}}</a>
+        <span class="trn" data-trn-key="nombre">Nombre: </span>{{$producto->nombre}}<br><span class="trn" data-trn-key="descripcion">Descripcion: </span>{{$producto->descripcion}}<br>Stock: {{$producto->stock}}<br><span class="trn" data-trn-key="enlace">Enlace: </span><a href='http://{{$producto->enlace}}'>{{$producto->enlace}}</a>
         <br><br>
         <!-- Estos botones llaman a las rutas que nos permiten eliminar y cambiar el stock de los productos -->
         <button class='update'><a class="trn" data-trn-key="eliminar" href='/eliminar/{{$producto->id}}'>Eliminar</a></button>
