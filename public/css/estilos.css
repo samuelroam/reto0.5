@@ -70,7 +70,10 @@ section{
 	flex-flow: row wrap;
 }
 
-.update a{
+.product .update a{
+	color: black;
+}
+ .update a{
 	color: black;
 }
 

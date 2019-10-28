@@ -100,8 +100,12 @@ public function destroy($id)
 {
 
 //Elimina el producto de la base datos y vuelve a la tienda
+    $productos = Producto::all()->where("id","=",$id);
+    foreach ($productos as $producto) {
         Producto::where("id",$id)->delete();
         return redirect("/productos/$producto->id_tienda");
+    }
+       
     
 }
 }
