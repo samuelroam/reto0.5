@@ -102,6 +102,6 @@ public function destroy($id)
 //Elimina el producto de la base datos y vuelve a la tienda
         Producto::where("id",$id)->delete();
         return redirect("/productos/$producto->id_tienda");
-    }
+    
 }
 }
