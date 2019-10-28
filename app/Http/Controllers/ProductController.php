@@ -101,8 +101,7 @@ public function destroy($id)
 //Selecciona el producto que queremos borrar para obtener el nombre de la imagen
     $productos = Producto::all()->where("id","=",$id);
     foreach ($productos as $producto) {
-//Eliminamos la imagen de la carpeta donde estaba guardada
-        unlink("/home/xlazkano/laravel/reto/public/img/productos/".$producto->imagen);
+
 //Elimina el producto de la base datos y vuelve a la tienda
         Producto::where("id",$id)->delete();
         return redirect("/productos/$producto->id_tienda");
