@@ -98,9 +98,6 @@ public function update(Request $request)
 */
 public function destroy($id)
 {
-//Selecciona el producto que queremos borrar para obtener el nombre de la imagen
-    $productos = Producto::all()->where("id","=",$id);
-    foreach ($productos as $producto) {
 
 //Elimina el producto de la base datos y vuelve a la tienda
         Producto::where("id",$id)->delete();
