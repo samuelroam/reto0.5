@@ -33,7 +33,7 @@ class productos extends Seeder
             'nombre' => "PS4",
             'descripcion' => "PS4",
             'stock' => 55,
-            'imagen' => "ps4.jpg",
+            'imagen' => "ps4.jpeg",
             'enlace' => "www.playstation.com",
             'id_tienda' => 2
         ]); 
