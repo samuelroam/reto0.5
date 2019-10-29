@@ -15,7 +15,7 @@ class productos extends Seeder
             'nombre' => "Camiseta azul",
             'descripcion' => "Camiseta azul",
             'stock' => 55,
-            'imagen' => "azul.jpg",
+            'imagen' => "azul.jpeg",
             'enlace' => "www.zara.com",
             'id_tienda' => 1
         ]); 
@@ -24,7 +24,7 @@ class productos extends Seeder
             'nombre' => "Camiseta roja",
             'descripcion' => "Camiseta roja",
             'stock' => 15,
-            'imagen' => "roja.jpg",
+            'imagen' => "roja.jpeg",
             'enlace' => "www.zara.com",
             'id_tienda' => 1
         ]); 
@@ -42,7 +42,7 @@ class productos extends Seeder
             'nombre' => "Xbox One",
             'descripcion' => "Xbox One",
             'stock' => 155,
-            'imagen' => "xbox.jpg",
+            'imagen' => "xbox.jpeg",
             'enlace' => "www.xbox.com",
             'id_tienda' => 2
         ]); 
@@ -51,7 +51,7 @@ class productos extends Seeder
             'nombre' => "Lentejas",
             'descripcion' => "Lentejas",
             'stock' => 55,
-            'imagen' => "azul.jpg",
+            'imagen' => "lentejas.jpg",
             'enlace' => "www.eroski.com",
             'id_tienda' => 3
         ]); 
